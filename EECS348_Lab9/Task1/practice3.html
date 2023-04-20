@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice 3</title>
+</head>
+
+<body>
+	<h1>EECS 368 - Lab 07: Practice 3</h1> 
+
+	Enter Password:
+	<input type="text" id="pass1"> 
+ 	<br>
+	Confirm Password: 
+	<input type="text" id="pass2">
+	<br>
+	<button onclick="validate()">Validate Passwords</button>  
+
+</body>
+
+<script>
+	function validate() {
+		var pass1 = document.getElementById("pass1").value;
+		var pass2 = document.getElementById("pass2").value;
+           
+		if (pass1 == "" || pass2 == "") {
+			alert("Error: The password field is Empty.");
+		} else if (pass1 == pass2) {
+			alert("Passwords match!");
+		} else {
+			alert("Error: Passwords do not match.")
+		}
+	}
+</script>
+</html>
